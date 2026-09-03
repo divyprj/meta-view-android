@@ -1,0 +1,53 @@
+name: Release Integrity & Distribution CI
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  verify-release:
+    name: Verify Release Artifact & Security Checksum
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify APK Binary Integrity
+        run: |
+          echo "Verifying SHA-256 checksums..."
+          if [ -f release/checksums.txt ]; then
+            cd release
+            sha256sum -c checksums.txt
+            echo "✅ Checksum verification passed successfully."
+          else
+            echo "❌ checksums.txt not found!"
+            exit 1
+          fi
+
+      - name: Check APK File Metadata
+        run: |
+          APK_FILE="release/MetaView-v1.0.0.apk"
+          if [ -f "$APK_FILE" ]; then
+            SIZE=$(stat -c%s "$APK_FILE")
+            echo "✅ Release binary present: $APK_FILE ($SIZE bytes)"
+          else
+            echo "❌ Release binary missing!"
+            exit 1
+          fi
+
+      - name: Source Code Leakage Prevention Check
+        run: |
+          echo "Verifying that no proprietary Kotlin/Java source code was committed..."
+          LEAKED_FILES=$(find . -name "*.kt" -o -name "*.java" | grep -v "/.github/" || true)
+          if [ -n "$LEAKED_FILES" ]; then
+            echo "❌ ERROR: Proprietary source code files detected in distribution repository:"
+            echo "$LEAKED_FILES"
+            exit 1
+          else
+            echo "✅ Source isolation verified: 0 source files committed. Intellectual property is secure."
+          fi

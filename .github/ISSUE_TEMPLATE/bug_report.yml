@@ -1,0 +1,60 @@
+name: 🐛 Bug Report
+description: Report a runtime defect, camera mismatch, or ingestion anomaly in Meta View.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue with Meta View. Please provide accurate device and operating system details.
+
+  - type: input
+    id: device
+    attributes:
+      label: Device Manufacturer & Model
+      description: e.g. Xiaomi Redmi Note 10 Lite, Samsung Galaxy S24 Ultra, Google Pixel 8 Pro
+      placeholder: e.g. Google Pixel 8 Pro
+    validations:
+      required: true
+
+  - type: input
+    id: android_version
+    attributes:
+      label: Android Version
+      description: e.g. Android 13, Android 14, HyperOS, OneUI 6
+      placeholder: e.g. Android 14
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      options:
+        - 3:4 Optical Sensor Harmonizer
+        - Instagram Story Ingestion / Glasses Badge
+        - Gyroscope & Parallax Simulation
+        - Photo / Video Resolution Export
+        - Other UI / Launch Defect
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Issue
+      description: Explain what happened and what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Steps to Reproduce
+      description: Outline step-by-step reproduction instructions.
+      placeholder: |
+        1. Open Meta View
+        2. Pick 3:4 vertical 4K video
+        3. Tap Share to Instagram Story
+        4. Observe behavior
+    validations:
+      required: true

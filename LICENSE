@@ -1,0 +1,21 @@
+PROPRIETARY SOFTWARE LICENSE & TERMS OF DISTRIBUTION
+
+Copyright (c) 2026 Divyansh Prajapati. All Rights Reserved.
+
+NOTICE TO USER:
+This repository contains binary distributions, documentation, and asset specifications for the Meta View application ("Software").
+
+1. GRANT OF LICENSE:
+Permission is granted solely to download, install, and execute the precompiled binary artifacts (APK) for personal, non-commercial use on compatible Android hardware devices.
+
+2. PROPRIETARY RIGHTS & RESTRICTIONS:
+All intellectual property rights, algorithms, QuickTime atom serialization schemes, sensor fusion heuristics, UI design systems, and architecture paradigms remain the exclusive property of the copyright holder.
+
+You explicitly MAY NOT:
+  a. Decompile, disassemble, reverse engineer, decrypt, extract source code, or attempt to derive the source code of the Software.
+  b. Modify, adapt, translate, or create derivative works based upon the Software or its binary packages.
+  c. Distribute, lease, rent, sell, sub-license, or commercially exploit the Software or any portion thereof without explicit written permission.
+  d. Remove, obscure, or alter any copyright notices, trademarks, or proprietary markings incorporated in the Software.
+
+3. DISCLAIMER OF WARRANTY:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

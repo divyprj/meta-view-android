@@ -1,0 +1,4 @@
+# Meta View Official Release Checksums (SHA-256)
+# Format: <SHA-256> *<Filename>
+
+A326E4E78EE2A09808374D8DE8AF9B0ADB1989A847188283C458CD3BA1B9ADDA *MetaView-v1.0.0.apk

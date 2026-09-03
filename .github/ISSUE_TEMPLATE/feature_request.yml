@@ -1,0 +1,32 @@
+name: 💡 Feature Request
+description: Propose an enhancement, camera preset, or sensor emulation feature for Meta View.
+labels: ["enhancement", "feature-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We welcome community proposals for device optimizations, new sensor modes, and media pipeline enhancements.
+
+  - type: input
+    id: title
+    attributes:
+      label: Feature Title
+      placeholder: e.g. 120fps High-Speed Audio Ingestion Mode
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Opportunity Statement
+      description: Describe the user scenario or problem this feature addresses.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Implementation
+      description: Describe how you envision this feature functioning within Meta View.
+    validations:
+      required: true
